@@ -71,11 +71,11 @@ function About() {
             <H1>My Skill</H1>
             <Flex justifyContent="center" mt={10} alignItems="center">
               <Grid templateColumns={{ base:"repeat(2, 1fr)" , sm:"repeat(3, 1fr)", md:"repeat(5, 1fr)"}} columnGap="32" rowGap="10" >
-                {SkillIcons.map((_, key) => {
+                {SkillIcons.map((item, key) => {
                   const Icon = SkillIcons[key];
                   return (
-                    <GridItem>
-                      <Icon size={50} />
+                    <GridItem key={key + 1} >
+                      <Icon  size={50} />
                     </GridItem>
                   );
                 })}
