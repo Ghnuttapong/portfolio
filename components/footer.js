@@ -26,26 +26,9 @@ function Footer() {
   return (
     <footer id="footer">
       <Box py={4} px={10} bg="black" textColor="white">
-        <Flex justifyContent="space-between">
+        <Flex width="max" justifyContent="center" flexDirection="column">
           <Box>
-            <Text
-              fontSize={"2xl"}
-              userSelect="none"
-              as="b"
-            >
-             Copyright: Gnuttapong
-            </Text>
-          </Box>
-          <Box>
-            <Text
-              fontSize={"2xl"}
-              textDecoration="underline"
-              userSelect="none"
-              as="b"
-            >
-              Contact
-            </Text>
-            <Flex direction="column" rowGap={2} mt="4">
+            <Flex gap={3} my="4">
               {ContactIcons &&
                 ContactIcons.map((_, key) => {
                   const Icon = ContactIcons[key].icon;
@@ -55,15 +38,17 @@ function Footer() {
                       target="_blank"
                       href={ContactIcons[key].link}
                     >
-                      <Flex alignItems="center" gap={2}>
-                        <Icon size={18} />
-                        {" : "} {ContactIcons[key].name}
-                      </Flex>
+                        <Icon size={20} />
                     </NextLink>
                   );
                 })}
               <NextLink href="/"></NextLink>
             </Flex>
+          </Box>
+          <Box>
+            <Text fontSize={"sm"} userSelect="none" letterSpacing={2}>
+              {<p>&copy;Gnuttapong 2023</p>}
+            </Text>
           </Box>
         </Flex>
       </Box>

@@ -8,7 +8,7 @@ import ReactTypingEffect from "react-typing-effect";
 import Head from "next/head";
 
 
-export default function Home() {
+export default function HomePage() {
   const saveFileCV = () => {
     saveAs(
       "https://w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",

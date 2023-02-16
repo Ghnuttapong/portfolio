@@ -60,7 +60,7 @@ const DisplayEducation = ({ src, year, name }) => {
   );
 };
 
-function About() {
+function AboutPage() {
   return (
     <>
       <Head>
@@ -103,4 +103,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutPage;
